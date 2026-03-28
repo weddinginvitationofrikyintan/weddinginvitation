@@ -1,0 +1,114 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+  /* Untuk desktop */
+#desk_cov {
+    position: fixed;  
+    left: 0;  
+    top: 0;  
+    width: calc(100% - 500px);  
+    height: 100vh;  
+    overflow: hidden; 
+}
+
+#isi {
+    margin-left: calc(100% - 500px);  
+    width: 500px; 
+}
+
+.ajaibfixed .elementor-background-overlay {
+    position: fixed !important; 
+    top: 0!important;
+    left: calc(100% - 500px)!important;
+    width: 500px!important;
+    pointer-events:none;
+}
+.ajaibfixedC .elementor-background-overlay, .ajaibfixedC::before {
+    position: fixed !important; 
+    top: 0!important;
+    left: calc(100% - 500px)!important;
+    width: 500px!important;
+    pointer-events:none;
+}
+
+@media (max-width: 500px) {
+    #desk_cov {
+        display: none; 
+    }
+}
+
+@media (max-width: 900px) and (min-width:768px) {
+    #desk_cov {
+        width: 50%; 
+    }
+
+    #isi {
+        margin-left: 50%; 
+        width: 50%; 
+    }
+    .ajaibfixed .elementor-background-overlay {
+        left: 50%!important;
+        width: 50%!important;
+    }    
+    .ajaibfixedC .elementor-background-overlay, .ajaibfixedC::before {
+        left: 50%!important;
+        width: 50%!important;
+    }
+}
+@media (max-width: 768px) {
+    #desk_cov {
+        display: none; 
+    }
+
+    #isi {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .ajaibfixed .elementor-background-overlay {
+        /* Atur ulang properti untuk sesuai dengan aturan #isi pada ukuran layar ini */
+        left: 0!important;
+        width: 100% !important; /* Sesuai dengan lebar #isi pada breakpoint ini */
+    }
+    .ajaibfixedC .elementor-background-overlay, .ajaibfixedC::before {
+        /* Atur ulang properti untuk sesuai dengan aturan #isi pada ukuran layar ini */
+        left: 0!important;
+        width: 100% !important; /* Sesuai dengan lebar #isi pada breakpoint ini */
+    }
+}
+
+body{
+    overflow-x: hidden !important;
+}
+html {
+  scroll-behavior: auto !important; /* Nonaktifkan smooth scrolling */
+}
+@media (min-width: 990px) {
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+}
+
+#eltemplate-amplop{
+    display: none;
+}
+
+#eltemplate-btnCover, #eltemplate-btnAmplop{
+cursor: pointer;
+}
